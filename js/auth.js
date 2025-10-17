@@ -58,8 +58,22 @@ class AuthSystem {
         const userType = this.currentUser.userType;
         const currentPage = window.location.pathname.split('/').pop();
         
+<<<<<<< Updated upstream
         // Don't redirect if already on appropriate page
         if (currentPage.includes('dashboard') || currentPage.includes('admin') || currentPage.includes('area-')) {
+=======
+        // Don't redirect if already on appropriate page or on public pages
+        if (currentPage.includes('dashboard') || 
+            currentPage.includes('admin') || 
+            currentPage.includes('area-') ||
+            currentPage === 'index.html' ||
+            currentPage === '' ||
+            currentPage.includes('projetos') ||
+            currentPage.includes('voluntariado') ||
+            currentPage.includes('doacoes') ||
+            currentPage.includes('transparencia') ||
+            currentPage.includes('contato')) {
+>>>>>>> Stashed changes
             return;
         }
 

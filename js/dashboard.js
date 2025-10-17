@@ -191,7 +191,26 @@ class DashboardManager {
         const counters = document.querySelectorAll('.stat-number');
         
         counters.forEach(counter => {
+<<<<<<< Updated upstream
             const target = parseInt(counter.textContent.replace(/[^\d]/g, ''));
+=======
+            // Usa o atributo data-value se existir, senão tenta fazer parse do texto
+            const dataValue = counter.getAttribute('data-value');
+            const isCurrency = counter.getAttribute('data-currency') === 'true';
+            
+            if (!dataValue) {
+                console.warn('Contador sem data-value:', counter);
+                return;
+            }
+            
+            const target = parseInt(dataValue);
+            
+            if (isNaN(target) || target === 0) {
+                console.warn('Valor inválido para contador:', dataValue);
+                return;
+            }
+            
+>>>>>>> Stashed changes
             const duration = 2000;
             const increment = target / (duration / 16);
             let current = 0;
@@ -203,10 +222,19 @@ class DashboardManager {
                     clearInterval(timer);
                 }
                 
+<<<<<<< Updated upstream
                 if (counter.textContent.includes('R$')) {
                     counter.textContent = 'R$ ' + Math.floor(current).toLocaleString();
                 } else {
                     counter.textContent = Math.floor(current).toLocaleString();
+=======
+                const roundedValue = Math.floor(current);
+                
+                if (isCurrency) {
+                    counter.textContent = 'R$ ' + roundedValue.toLocaleString('pt-BR');
+                } else {
+                    counter.textContent = roundedValue.toLocaleString('pt-BR');
+>>>>>>> Stashed changes
                 }
             }, 16);
         });
