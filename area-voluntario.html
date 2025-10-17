@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Área restrita do voluntário - Acompanhe suas atividades, certificados e impacto na ONG Programando o Futuro.">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="theme-color" content="#6366f1">
+    
+    <title>Área do Voluntário - Dashboard | Programando o Futuro</title>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/user-area.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+</head>
+<body class="user-area-page">
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar" aria-label="Menu principal">
+            <div class="container">
+                <div class="navbar-brand">
+                    <img src="assets/logo.png" alt="Logo Programando o Futuro" class="logo">
+                    <span class="brand-text">Programando o Futuro</span>
+                </div>
+                
+                <div class="navbar-actions">
+                    <a href="index.html" class="nav-link">Voltar ao Site</a>
+                    <button class="user-menu-btn" id="userMenuBtn">
+                        <span class="user-avatar">
+                            <span id="userInitials">V</span>
+                        </span>
+                        <span id="userName">Voluntário</span>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6,9 12,15 18,9"/>
+                        </svg>
+                    </button>
+                    
+                    <div class="user-dropdown" id="userDropdown">
+                        <a href="#perfil" class="dropdown-item">Meu Perfil</a>
+                        <a href="#configuracoes" class="dropdown-item">Configurações</a>
+                        <hr class="dropdown-divider">
+                        <button class="dropdown-item logout-btn" onclick="authSystem.logout()">Sair</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Welcome Section -->
+            <section class="welcome-section">
+                <div class="welcome-content">
+                    <h1 class="welcome-title">Bem-vindo, <span id="volunteerName">Voluntário</span>!</h1>
+                    <p class="welcome-subtitle">Acompanhe suas atividades e descubra novas oportunidades</p>
+                </div>
+                
+                <div class="quick-stats">
+                    <div class="stat-item">
+                        <div class="stat-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+                            </svg>
+                        </div>
+                        <div class="stat-info">
+                            <span class="stat-number">8</span>
+                            <span class="stat-label">Projetos Participados</span>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-item">
+                        <div class="stat-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/>
+                                <polyline points="12,6 12,12 16,14"/>
+                            </svg>
+                        </div>
+                        <div class="stat-info">
+                            <span class="stat-number">156</span>
+                            <span class="stat-label">Horas Voluntárias</span>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-item">
+                        <div class="stat-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                            </svg>
+                        </div>
+                        <div class="stat-info">
+                            <span class="stat-number">3</span>
+                            <span class="stat-label">Certificados</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Navigation Tabs -->
+            <nav class="tab-navigation">
+                <button class="tab-btn active" data-tab="oportunidades">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+                    </svg>
+                    Oportunidades
+                </button>
+                <button class="tab-btn" data-tab="historico">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"/>
+                        <polyline points="12,6 12,12 16,14"/>
+                    </svg>
+                    Meu Histórico
+                </button>
+                <button class="tab-btn" data-tab="certificados">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                        <polyline points="14,2 14,8 20,8"/>
+                    </svg>
+                    Certificados
+                </button>
+                <button class="tab-btn" data-tab="perfil">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                        <circle cx="12" cy="7" r="4"/>
+                    </svg>
+                    Meu Perfil
+                </button>
+            </nav>
+
+            <!-- Tab Content -->
+            <div class="tab-content">
+                <!-- Oportunidades Tab -->
+                <section id="oportunidades-tab" class="tab-panel active">
+                    <div class="section-header">
+                        <h2>Novas Oportunidades</h2>
+                        <div class="filters">
+                            <select class="filter-select" id="categoryFilter">
+                                <option value="">Todas as categorias</option>
+                                <option value="educacao">Educação</option>
+                                <option value="empoderamento">Empoderamento</option>
+                                <option value="inclusao">Inclusão</option>
+                                <option value="eventos">Eventos</option>
+                            </select>
+                            <select class="filter-select" id="locationFilter">
+                                <option value="">Todas as localidades</option>
+                                <option value="presencial">Presencial</option>
+                                <option value="remoto">Remoto</option>
+                                <option value="hibrido">Híbrido</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="opportunities-grid">
+                        <div class="opportunity-card">
+                            <div class="card-header">
+                                <div class="project-badge educacao">Educação</div>
+                                <div class="urgency-badge high">Urgente</div>
+                            </div>
+                            <h3 class="opportunity-title">Mentor de Programação - CodeKids</h3>
+                            <p class="opportunity-description">
+                                Procuramos mentores para ensinar programação básica para crianças de 8 a 14 anos. 
+                                Experiência com Scratch e Python desejável.
+                            </p>
+                            <div class="opportunity-details">
+                                <div class="detail-item">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                        <circle cx="12" cy="10" r="3"/>
+                                    </svg>
+                                    <span>São Paulo - SP</span>
+                                </div>
+                                <div class="detail-item">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="12" cy="12" r="10"/>
+                                        <polyline points="12,6 12,12 16,14"/>
+                                    </svg>
+                                    <span>4h/semana</span>
+                                </div>
+                                <div class="detail-item">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                                        <line x1="16" y1="2" x2="16" y2="6"/>
+                                        <line x1="8" y1="2" x2="8" y2="6"/>
+                                        <line x1="3" y1="10" x2="21" y2="10"/>
+                                    </svg>
+                                    <span>Início: 15/11/2024</span>
+                                </div>
+                            </div>
+                            <div class="card-actions">
+                                <button class="btn btn-primary">Candidatar-se</button>
+                                <button class="btn btn-outline">Saiba Mais</button>
+                            </div>
+                        </div>
+
+                        <div class="opportunity-card">
+                            <div class="card-header">
+                                <div class="project-badge empoderamento">Empoderamento</div>
+                                <div class="urgency-badge medium">Moderada</div>
+                            </div>
+                            <h3 class="opportunity-title">Facilitadora - TechWomen</h3>
+                            <p class="opportunity-description">
+                                Buscamos facilitadoras para workshops de tecnologia voltados para mulheres em situação de vulnerabilidade.
+                            </p>
+                            <div class="opportunity-details">
+                                <div class="detail-item">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                        <circle cx="12" cy="10" r="3"/>
+                                    </svg>
+                                    <span>Remoto</span>
+                                </div>
+                                <div class="detail-item">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="12" cy="12" r="10"/>
+                                        <polyline points="12,6 12,12 16,14"/>
+                                    </svg>
+                                    <span>6h/semana</span>
+                                </div>
+                                <div class="detail-item">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                                        <line x1="16" y1="2" x2="16" y2="6"/>
+                                        <line x1="8" y1="2" x2="8" y2="6"/>
+                                        <line x1="3" y1="10" x2="21" y2="10"/>
+                                    </svg>
+                                    <span>Início: 20/11/2024</span>
+                                </div>
+                            </div>
+                            <div class="card-actions">
+                                <button class="btn btn-primary">Candidatar-se</button>
+                                <button class="btn btn-outline">Saiba Mais</button>
+                            </div>
+                        </div>
+
+                        <div class="opportunity-card">
+                            <div class="card-header">
+                                <div class="project-badge inclusao">Inclusão</div>
+                                <div class="urgency-badge low">Baixa</div>
+                            </div>
+                            <h3 class="opportunity-title">Instrutor - Digital Senior</h3>
+                            <p class="opportunity-description">
+                                Ensine idosos a usar tecnologia básica: smartphone, WhatsApp, e-mail e navegação na internet.
+                            </p>
+                            <div class="opportunity-details">
+                                <div class="detail-item">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                        <circle cx="12" cy="10" r="3"/>
+                                    </svg>
+                                    <span>Rio de Janeiro - RJ</span>
+                                </div>
+                                <div class="detail-item">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="12" cy="12" r="10"/>
+                                        <polyline points="12,6 12,12 16,14"/>
+                                    </svg>
+                                    <span>3h/semana</span>
+                                </div>
+                                <div class="detail-item">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                                        <line x1="16" y1="2" x2="16" y2="6"/>
+                                        <line x1="8" y1="2" x2="8" y2="6"/>
+                                        <line x1="3" y1="10" x2="21" y2="10"/>
+                                    </svg>
+                                    <span>Início: 01/12/2024</span>
+                                </div>
+                            </div>
+                            <div class="card-actions">
+                                <button class="btn btn-primary">Candidatar-se</button>
+                                <button class="btn btn-outline">Saiba Mais</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Histórico Tab -->
+                <section id="historico-tab" class="tab-panel">
+                    <div class="section-header">
+                        <h2>Meu Histórico de Participação</h2>
+                        <div class="timeline-filter">
+                            <button class="filter-btn active" data-filter="all">Todos</button>
+                            <button class="filter-btn" data-filter="active">Ativos</button>
+                            <button class="filter-btn" data-filter="completed">Concluídos</button>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline">
+                        <div class="timeline-item completed">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <div class="timeline-header">
+                                    <h3>CodeKids - Turma 2024.1</h3>
+                                    <span class="timeline-date">Mar - Jun 2024</span>
+                                </div>
+                                <p class="timeline-description">
+                                    Mentor de programação para 15 crianças. Ensinou conceitos básicos de Scratch e Python.
+                                </p>
+                                <div class="timeline-stats">
+                                    <span class="stat">48 horas voluntárias</span>
+                                    <span class="stat">15 crianças atendidas</span>
+                                    <span class="stat">Certificado emitido</span>
+                                </div>
+                                <div class="timeline-actions">
+                                    <button class="btn btn-sm btn-outline">Ver Certificado</button>
+                                    <button class="btn btn-sm btn-outline">Avaliar Projeto</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item active">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <div class="timeline-header">
+                                    <h3>TechWomen - Turma 2024.2</h3>
+                                    <span class="timeline-date">Set 2024 - Atual</span>
+                                </div>
+                                <p class="timeline-description">
+                                    Facilitadora de workshops sobre desenvolvimento web para mulheres.
+                                </p>
+                                <div class="timeline-stats">
+                                    <span class="stat">32 horas (em andamento)</span>
+                                    <span class="stat">12 mulheres atendidas</span>
+                                    <span class="stat">85% de frequência</span>
+                                </div>
+                                <div class="timeline-actions">
+                                    <button class="btn btn-sm btn-primary">Acessar Projeto</button>
+                                    <button class="btn btn-sm btn-outline">Relatório Semanal</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item completed">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <div class="timeline-header">
+                                    <h3>Digital Senior - Turma Piloto</h3>
+                                    <span class="timeline-date">Jan - Fev 2024</span>
+                                </div>
+                                <p class="timeline-description">
+                                    Instrutor de inclusão digital para idosos, focando em uso básico de smartphones.
+                                </p>
+                                <div class="timeline-stats">
+                                    <span class="stat">24 horas voluntárias</span>
+                                    <span class="stat">8 idosos atendidos</span>
+                                    <span class="stat">Certificado emitido</span>
+                                </div>
+                                <div class="timeline-actions">
+                                    <button class="btn btn-sm btn-outline">Ver Certificado</button>
+                                    <button class="btn btn-sm btn-outline">Compartilhar Experiência</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Certificados Tab -->
+                <section id="certificados-tab" class="tab-panel">
+                    <div class="section-header">
+                        <h2>Meus Certificados</h2>
+                        <p class="section-subtitle">Certificados digitais das suas participações em projetos</p>
+                    </div>
+                    
+                    <div class="certificates-grid">
+                        <div class="certificate-card">
+                            <div class="certificate-preview">
+                                <div class="certificate-icon">
+                                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                    </svg>
+                                </div>
+                                <h3>Certificado de Participação</h3>
+                                <p>CodeKids - Turma 2024.1</p>
+                            </div>
+                            <div class="certificate-info">
+                                <div class="info-item">
+                                    <span class="label">Emitido em:</span>
+                                    <span class="value">15/06/2024</span>
+                                </div>
+                                <div class="info-item">
+                                    <span class="label">Horas:</span>
+                                    <span class="value">48h</span>
+                                </div>
+                                <div class="info-item">
+                                    <span class="label">Código:</span>
+                                    <span class="value">CK2024-001-VLT</span>
+                                </div>
+                            </div>
+                            <div class="certificate-actions">
+                                <button class="btn btn-primary">Baixar PDF</button>
+                                <button class="btn btn-outline">Compartilhar</button>
+                                <button class="btn btn-outline">Verificar</button>
+                            </div>
+                        </div>
+
+                        <div class="certificate-card">
+                            <div class="certificate-preview">
+                                <div class="certificate-icon">
+                                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                    </svg>
+                                </div>
+                                <h3>Certificado de Participação</h3>
+                                <p>Digital Senior - Turma Piloto</p>
+                            </div>
+                            <div class="certificate-info">
+                                <div class="info-item">
+                                    <span class="label">Emitido em:</span>
+                                    <span class="value">28/02/2024</span>
+                                </div>
+                                <div class="info-item">
+                                    <span class="label">Horas:</span>
+                                    <span class="value">24h</span>
+                                </div>
+                                <div class="info-item">
+                                    <span class="label">Código:</span>
+                                    <span class="value">DS2024-001-VLT</span>
+                                </div>
+                            </div>
+                            <div class="certificate-actions">
+                                <button class="btn btn-primary">Baixar PDF</button>
+                                <button class="btn btn-outline">Compartilhar</button>
+                                <button class="btn btn-outline">Verificar</button>
+                            </div>
+                        </div>
+
+                        <div class="certificate-card pending">
+                            <div class="certificate-preview">
+                                <div class="certificate-icon">
+                                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="12" cy="12" r="10"/>
+                                        <polyline points="12,6 12,12 16,14"/>
+                                    </svg>
+                                </div>
+                                <h3>Certificado Pendente</h3>
+                                <p>TechWomen - Turma 2024.2</p>
+                            </div>
+                            <div class="certificate-info">
+                                <div class="info-item">
+                                    <span class="label">Previsão:</span>
+                                    <span class="value">Dezembro 2024</span>
+                                </div>
+                                <div class="info-item">
+                                    <span class="label">Progresso:</span>
+                                    <span class="value">65% concluído</span>
+                                </div>
+                                <div class="info-item">
+                                    <span class="label">Horas atuais:</span>
+                                    <span class="value">32h de 50h</span>
+                                </div>
+                            </div>
+                            <div class="certificate-actions">
+                                <button class="btn btn-outline" disabled>Aguardando Conclusão</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Perfil Tab -->
+                <section id="perfil-tab" class="tab-panel">
+                    <div class="section-header">
+                        <h2>Meu Perfil</h2>
+                        <button class="btn btn-outline">Editar Perfil</button>
+                    </div>
+                    
+                    <div class="profile-content">
+                        <div class="profile-card">
+                            <div class="profile-avatar">
+                                <div class="avatar-circle">
+                                    <span id="profileInitials">JS</span>
+                                </div>
+                                <button class="avatar-edit">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/>
+                                        <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/>
+                                    </svg>
+                                </button>
+                            </div>
+                            
+                            <div class="profile-info">
+                                <h3 id="profileName">João Silva</h3>
+                                <p class="profile-role">Voluntário Ativo</p>
+                                <p class="profile-since">Membro desde Janeiro 2024</p>
+                            </div>
+                        </div>
+                        
+                        <div class="profile-details">
+                            <div class="detail-section">
+                                <h4>Informações Pessoais</h4>
+                                <div class="detail-grid">
+                                    <div class="detail-item">
+                                        <span class="label">E-mail:</span>
+                                        <span class="value">joao.silva@email.com</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <span class="label">Telefone:</span>
+                                        <span class="value">(11) 99999-9999</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <span class="label">Localização:</span>
+                                        <span class="value">São Paulo - SP</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <span class="label">Data de Nascimento:</span>
+                                        <span class="value">15/03/1990</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="detail-section">
+                                <h4>Habilidades e Interesses</h4>
+                                <div class="skills-tags">
+                                    <span class="skill-tag">Programação</span>
+                                    <span class="skill-tag">Python</span>
+                                    <span class="skill-tag">JavaScript</span>
+                                    <span class="skill-tag">Ensino</span>
+                                    <span class="skill-tag">Mentoria</span>
+                                    <span class="skill-tag">Design</span>
+                                </div>
+                            </div>
+                            
+                            <div class="detail-section">
+                                <h4>Preferências de Voluntariado</h4>
+                                <div class="preferences">
+                                    <div class="preference-item">
+                                        <span class="label">Disponibilidade:</span>
+                                        <span class="value">Fins de semana e noites</span>
+                                    </div>
+                                    <div class="preference-item">
+                                        <span class="label">Modalidade:</span>
+                                        <span class="value">Presencial e Remoto</span>
+                                    </div>
+                                    <div class="preference-item">
+                                        <span class="label">Áreas de Interesse:</span>
+                                        <span class="value">Educação, Empoderamento</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/volunteer-area.js"></script>
+</body>
+</html>

@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Transparência e prestação de contas da ONG Programando o Futuro. Relatórios financeiros, aplicação de recursos, certificações e auditoria. Selo de Transparência.">
+    <meta name="keywords" content="transparência ONG, prestação de contas, relatório financeiro, OSCIP, certificações, auditoria, aplicação de recursos, doações">
+    <meta name="author" content="ONG Programando o Futuro">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#6366f1">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://programandofuturo.org/transparencia.html">
+    <meta property="og:title" content="Transparência - Prestação de Contas">
+    <meta property="og:description" content="Acesse nossos relatórios financeiros e veja como aplicamos cada real doado. 100% de transparência e compromisso com a sociedade.">
+    <meta property="og:image" content="https://programandofuturo.org/assets/images/transparency-og.jpg">
+    <meta property="og:locale" content="pt_BR">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Transparência - Programando o Futuro">
+    <meta name="twitter:description" content="Relatórios financeiros e prestação de contas com 100% de transparência.">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://programandofuturo.org/transparencia.html">
+    
+    <title>Transparência e Prestação de Contas | Programando o Futuro</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/transparency.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    
+    <!-- Structured Data (Schema.org) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "AboutPage",
+      "name": "Transparência - ONG Programando o Futuro",
+      "description": "Página de transparência e prestação de contas da ONG",
+      "url": "https://programandofuturo.org/transparencia.html",
+      "mainEntity": {
+        "@type": "NGO",
+        "name": "ONG Programando o Futuro",
+        "nonprofitStatus": "OSCIP",
+        "ethicsPolicy": "https://programandofuturo.org/codigo-etica.pdf",
+        "publishingPrinciples": "Compromisso com transparência total na aplicação de recursos e prestação de contas à sociedade"
+      }
+    }
+    </script>
+    
+    <!-- Recharts via CDN -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/recharts@2.8.0/umd/Recharts.js"></script>
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="navbar-brand">
+                    <img src="assets/logo.png" alt="Logo Programando o Futuro" class="logo">
+                    <span class="brand-text">Programando o Futuro</span>
+                </div>
+                <button class="navbar-toggle" aria-label="Abrir menu">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+                <ul class="navbar-menu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="projetos.html" class="nav-link">Projetos</a></li>
+                    <li><a href="voluntariado.html" class="nav-link">Voluntariado</a></li>
+                    <li><a href="doacoes.html" class="nav-link">Doações</a></li>
+                    <li><a href="transparencia.html" class="nav-link active">Transparência</a></li>
+                    <li><a href="contato.html" class="nav-link">Contato</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Compromisso com Transparência -->
+        <section class="transparency-commitment">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Nosso Compromisso</h2>
+                    <p class="section-subtitle">Acreditamos que transparência é fundamental para construir confiança e impacto social</p>
+                </div>
+                
+                <div class="commitment-grid">
+                    <div class="commitment-card">
+                        <div class="commitment-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                                <path d="M9 12l2 2 4-4"/>
+                            </svg>
+                        </div>
+                        <h3>Dados Verificados</h3>
+                        <p>Todas as informações são auditadas por empresa independente e validadas pelo Conselho Fiscal</p>
+                        <div class="commitment-feature">
+                            <span class="feature-icon">✓</span>
+                            <span>Auditoria externa anual</span>
+                        </div>
+                    </div>
+                    
+                    <div class="commitment-card">
+                        <div class="commitment-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/>
+                                <polyline points="12,6 12,12 16,14"/>
+                            </svg>
+                        </div>
+                        <h3>Relatórios Regulares</h3>
+                        <p>Publicamos relatórios trimestrais e anuais com detalhamento completo de receitas e despesas</p>
+                        <div class="commitment-feature">
+                            <span class="feature-icon">✓</span>
+                            <span>Relatórios a cada 3 meses</span>
+                        </div>
+                    </div>
+                    
+                    <div class="commitment-card">
+                        <div class="commitment-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M14 9V5a3 3 0 0 0-6 0v4"/>
+                                <rect x="2" y="9" width="20" height="12" rx="2" ry="2"/>
+                            </svg>
+                        </div>
+                        <h3>Dados Abertos</h3>
+                        <p>Disponibilizamos dados em formato aberto para pesquisadores e interessados no terceiro setor</p>
+                        <div class="commitment-feature">
+                            <span class="feature-icon">✓</span>
+                            <span>API pública disponível</span>
+                        </div>
+                    </div>
+                    
+                    <div class="commitment-card">
+                        <div class="commitment-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+                                <circle cx="9" cy="7" r="4"/>
+                                <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                            </svg>
+                        </div>
+                        <h3>Canal Direto</h3>
+                        <p>Mantemos canais abertos para dúvidas, sugestões e denúncias da comunidade</p>
+                        <div class="commitment-feature">
+                            <span class="feature-icon">✓</span>
+                            <span>Resposta em até 48h</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Métricas Gerais -->
+        <section class="metrics-overview" id="metrics-overview">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Métricas em Tempo Real</h2>
+                    <p class="section-subtitle">Acompanhe nossos resultados e o impacto de cada real investido</p>
+                </div>
+                
+                <div class="metrics-grid">
+                    <div class="metric-card featured">
+                        <div class="metric-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="12" y1="1" x2="12" y2="23"/>
+                                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                            </svg>
+                        </div>
+                        <div class="metric-value">R$ 2.450.000</div>
+                        <div class="metric-label">Recursos Arrecadados (2024)</div>
+                        <div class="metric-change positive">
+                            <span class="change-icon">↗</span>
+                            <span>+15% vs 2023</span>
+                        </div>
+                        <div class="metric-detail">Meta anual: R$ 2.800.000</div>
+                    </div>
+                    
+                    <div class="metric-card">
+                        <div class="metric-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9 12l2 2 4-4"/>
+                                <path d="M21 12c.552 0 1-.448 1-1V8c0-.552-.448-1-1-1H3c-.552 0-1 .448-1 1v3c0 .552.448 1 1 1h18z"/>
+                            </svg>
+                        </div>
+                        <div class="metric-value">R$ 2.180.000</div>
+                        <div class="metric-label">Recursos Aplicados (2024)</div>
+                        <div class="metric-change positive">
+                            <span class="change-icon">✓</span>
+                            <span>89% do total arrecadado</span>
+                        </div>
+                        <div class="metric-detail">Eficiência operacional</div>
+                    </div>
+                    
+                    <div class="metric-card">
+                        <div class="metric-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+                                <circle cx="9" cy="7" r="4"/>
+                                <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                            </svg>
+                        </div>
+                        <div class="metric-value">2.547</div>
+                        <div class="metric-label">Pessoas Beneficiadas</div>
+                        <div class="metric-change positive">
+                            <span class="change-icon">↗</span>
+                            <span>+22% vs 2023</span>
+                        </div>
+                        <div class="metric-detail">Impacto social direto</div>
+                    </div>
+                    
+                    <div class="metric-card">
+                        <div class="metric-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                            </svg>
+                        </div>
+                        <div class="metric-value">45</div>
+                        <div class="metric-label">Projetos Ativos</div>
+                        <div class="metric-change positive">
+                            <span class="change-icon">+</span>
+                            <span>8 novos projetos</span>
+                        </div>
+                        <div class="metric-detail">Expansão contínua</div>
+                    </div>
+                </div>
+                
+                <div class="efficiency-summary">
+                    <div class="summary-item">
+                        <h4>Custo por Beneficiário</h4>
+                        <span class="summary-value">R$ 856</span>
+                        <span class="summary-trend positive">-12% vs 2023</span>
+                    </div>
+                    <div class="summary-item">
+                        <h4>Taxa de Empregabilidade</h4>
+                        <span class="summary-value">78%</span>
+                        <span class="summary-trend positive">+5% vs 2023</span>
+                    </div>
+                    <div class="summary-item">
+                        <h4>Satisfação dos Beneficiários</h4>
+                        <span class="summary-value">4.8/5</span>
+                        <span class="summary-trend positive">+0.3 vs 2023</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gráficos de Impacto -->
+        <section class="charts-section">
+            <div class="container">
+                <h2 class="section-title">Visualização de Dados</h2>
+                
+                <div class="charts-layout">
+                    <!-- Coluna Esquerda - 2 Gráficos -->
+                    <div class="charts-left">
+                        <!-- Gráfico de Linha - Evolução de Voluntários -->
+                        <div class="chart-container">
+                            <div class="chart-header">
+                                <h3>Evolução do Número de Voluntários</h3>
+                                <p>Crescimento da nossa comunidade de voluntários nos últimos 12 meses</p>
+                            </div>
+                            <div class="chart-wrapper">
+                                <div id="lineChart" class="chart"></div>
+                            </div>
+                        </div>
+
+                        <!-- Gráfico de Barras - Impacto por Região -->
+                        <div class="chart-container">
+                            <div class="chart-header">
+                                <h3>Impacto Social por Região</h3>
+                                <p>Número de pessoas atendidas em cada região da cidade</p>
+                            </div>
+                            <div class="chart-wrapper">
+                                <div id="barChart" class="chart"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Coluna Direita - 1 Gráfico -->
+                    <div class="charts-right">
+                        <!-- Gráfico de Pizza - Distribuição de Recursos -->
+                        <div class="chart-container">
+                            <div class="chart-header">
+                                <h3>Distribuição de Recursos por Área</h3>
+                                <p>Como os recursos são aplicados em nossas diferentes áreas de atuação</p>
+                            </div>
+                            <div class="chart-wrapper">
+                                <div id="pieChart" class="chart"></div>
+                                <div class="chart-legend">
+                                    <div class="legend-item">
+                                        <span class="legend-color" style="background-color: #2563eb;"></span>
+                                        <span>Educação (45%)</span>
+                                    </div>
+                                    <div class="legend-item">
+                                        <span class="legend-color" style="background-color: #10b981;"></span>
+                                        <span>Infraestrutura (25%)</span>
+                                    </div>
+                                    <div class="legend-item">
+                                        <span class="legend-color" style="background-color: #f59e0b;"></span>
+                                        <span>Capacitação (20%)</span>
+                                    </div>
+                                    <div class="legend-item">
+                                        <span class="legend-color" style="background-color: #ef4444;"></span>
+                                        <span>Administrativo (10%)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Relatórios Financeiros -->
+        <section class="financial-reports" id="financial-reports">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Relatórios Financeiros</h2>
+                    <p class="section-subtitle">Documentos oficiais auditados e validados pelo Conselho Fiscal</p>
+                </div>
+                
+                <div class="reports-grid">
+                    <div class="report-card featured">
+                        <div class="report-badge">
+                            <span class="badge-icon">🏆</span>
+                            <span>Mais Recente</span>
+                        </div>
+                        <div class="report-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                                <polyline points="14,2 14,8 20,8"/>
+                                <line x1="16" y1="13" x2="8" y2="13"/>
+                                <line x1="16" y1="17" x2="8" y2="17"/>
+                                <polyline points="10,9 9,9 8,9"/>
+                            </svg>
+                        </div>
+                        <h3>Relatório Anual 2024</h3>
+                        <p>Balanço completo das atividades, resultados financeiros e impacto social do ano</p>
+                        <div class="report-details">
+                            <span class="detail">📄 45 páginas</span>
+                            <span class="detail">📅 Publicado em Jan/2025</span>
+                            <span class="detail">✅ Auditado</span>
+                        </div>
+                        <a href="assets/reports/relatorio-anual-2024.pdf" class="btn btn-primary" download>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                                <polyline points="7,10 12,15 17,10"/>
+                                <line x1="12" y1="15" x2="12" y2="3"/>
+                            </svg>
+                            Download PDF
+                        </a>
+                    </div>
+                    
+                    <div class="report-card">
+                        <div class="report-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                                <line x1="16" y1="2" x2="16" y2="6"/>
+                                <line x1="8" y1="2" x2="8" y2="6"/>
+                                <line x1="3" y1="10" x2="21" y2="10"/>
+                            </svg>
+                        </div>
+                        <h3>Demonstrativo Trimestral</h3>
+                        <p>Receitas, despesas e aplicação de recursos do 4º trimestre de 2024</p>
+                        <div class="report-details">
+                            <span class="detail">📄 12 páginas</span>
+                            <span class="detail">📅 Out-Dez/2024</span>
+                            <span class="detail">✅ Validado</span>
+                        </div>
+                        <a href="assets/reports/demonstrativo-q4-2024.pdf" class="btn btn-outline" download>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                                <polyline points="7,10 12,15 17,10"/>
+                                <line x1="12" y1="15" x2="12" y2="3"/>
+                            </svg>
+                            Download PDF
+                        </a>
+                    </div>
+                    
+                    <div class="report-card">
+                        <div class="report-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/>
+                                <polyline points="12,6 12,12 16,14"/>
+                            </svg>
+                        </div>
+                        <h3>Auditoria Externa</h3>
+                        <p>Relatório de auditoria independente realizada pela Ernst & Young</p>
+                        <div class="report-details">
+                            <span class="detail">📄 28 páginas</span>
+                            <span class="detail">📅 Dez/2024</span>
+                            <span class="detail">🏅 Aprovado</span>
+                        </div>
+                        <a href="assets/reports/auditoria-2024.pdf" class="btn btn-outline" download>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                                <polyline points="7,10 12,15 17,10"/>
+                                <line x1="12" y1="15" x2="12" y2="3"/>
+                            </svg>
+                            Download PDF
+                        </a>
+                    </div>
+                    
+                    <div class="report-card">
+                        <div class="report-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9 12l2 2 4-4"/>
+                                <path d="M21 12c.552 0 1-.448 1-1V8c0-.552-.448-1-1-1H3c-.552 0-1 .448-1 1v3c0 .552.448 1 1 1h18z"/>
+                            </svg>
+                        </div>
+                        <h3>Prestação de Contas</h3>
+                        <p>Detalhamento de todas as doações recebidas e sua aplicação por projeto</p>
+                        <div class="report-details">
+                            <span class="detail">📄 18 páginas</span>
+                            <span class="detail">📅 Mensal</span>
+                            <span class="detail">📊 Detalhado</span>
+                        </div>
+                        <a href="assets/reports/prestacao-contas-2024.pdf" class="btn btn-outline" download>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                                <polyline points="7,10 12,15 17,10"/>
+                                <line x1="12" y1="15" x2="12" y2="3"/>
+                            </svg>
+                            Download PDF
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="reports-summary">
+                    <div class="summary-info">
+                        <h4>Histórico Completo</h4>
+                        <p>Todos os relatórios desde 2012 estão disponíveis em nosso portal de transparência</p>
+                        <a href="https://transparencia.programandofuturo.org" class="btn btn-secondary" target="_blank">
+                            Acessar Portal Completo
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                                <polyline points="15,3 21,3 21,9"/>
+                                <line x1="10" y1="14" x2="21" y2="3"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certificações -->
+        <section class="certifications">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Certificações e Selos</h2>
+                    <p class="section-subtitle">Reconhecimentos oficiais que validam nossa credibilidade e transparência</p>
+                </div>
+                
+                <div class="certifications-grid">
+                    <div class="cert-item">
+                        <div class="cert-image">
+                            <img src="assets/images/cert-cnpj.png" alt="Certificação CNPJ" loading="lazy">
+                            <div class="cert-status active">Ativo</div>
+                        </div>
+                        <div class="cert-content">
+                            <h4>CNPJ Regularizado</h4>
+                            <p>Organização regularizada na Receita Federal com situação ativa</p>
+                            <div class="cert-details">
+                                <span class="detail">📋 CNPJ: 12.345.678/0001-90</span>
+                                <span class="detail">📅 Desde: 2012</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="cert-item">
+                        <div class="cert-image">
+                            <img src="assets/images/cert-transparencia.png" alt="Selo de Transparência" loading="lazy">
+                            <div class="cert-status verified">Verificado</div>
+                        </div>
+                        <div class="cert-content">
+                            <h4>Selo de Transparência</h4>
+                            <p>Certificado pelo Instituto Doar por excelência em prestação de contas</p>
+                            <div class="cert-details">
+                                <span class="detail">🏆 Nível: Ouro</span>
+                                <span class="detail">📅 Renovado: 2024</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="cert-item">
+                        <div class="cert-image">
+                            <img src="assets/images/cert-oscip.png" alt="OSCIP" loading="lazy">
+                            <div class="cert-status certified">Certificado</div>
+                        </div>
+                        <div class="cert-content">
+                            <h4>OSCIP</h4>
+                            <p>Organização da Sociedade Civil de Interesse Público reconhecida pelo Ministério da Justiça</p>
+                            <div class="cert-details">
+                                <span class="detail">🏛️ Ministério da Justiça</span>
+                                <span class="detail">📅 Desde: 2015</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="cert-item">
+                        <div class="cert-image">
+                            <img src="assets/images/cert-iso.png" alt="ISO 9001" loading="lazy">
+                            <div class="cert-status quality">Qualidade</div>
+                        </div>
+                        <div class="cert-content">
+                            <h4>ISO 9001:2015</h4>
+                            <p>Certificação internacional de qualidade em sistemas de gestão</p>
+                            <div class="cert-details">
+                                <span class="detail">🌍 Certificadora: SGS</span>
+                                <span class="detail">📅 Válido até: 2026</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Conselho Fiscal -->
+        <section class="fiscal-council">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Conselho Fiscal</h2>
+                    <p class="section-subtitle">Profissionais independentes que fiscalizam e validam nossas atividades</p>
+                </div>
+                
+                <div class="council-grid">
+                    <div class="council-member">
+                        <div class="member-image">
+                            <img src="assets/images/conselho-1.jpg" alt="Dr. Roberto Silva" loading="lazy">
+                            <div class="member-badge">
+                                <span class="badge-icon">👑</span>
+                                <span>Presidente</span>
+                            </div>
+                        </div>
+                        <div class="member-content">
+                            <h3>Dr. Roberto Silva</h3>
+                            <p class="role">Presidente do Conselho Fiscal</p>
+                            <p class="bio">Contador com 20 anos de experiência em ONGs e especialista em auditoria do terceiro setor</p>
+                            <div class="member-credentials">
+                                <span class="credential">📜 CRC-SP 123456</span>
+                                <span class="credential">🎓 MBA em Gestão</span>
+                                <span class="credential">⏱️ 5 anos no conselho</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="council-member">
+                        <div class="member-image">
+                            <img src="assets/images/conselho-2.jpg" alt="Dra. Marina Costa" loading="lazy">
+                            <div class="member-badge">
+                                <span class="badge-icon">⚖️</span>
+                                <span>Conselheira</span>
+                            </div>
+                        </div>
+                        <div class="member-content">
+                            <h3>Dra. Marina Costa</h3>
+                            <p class="role">Conselheira Fiscal</p>
+                            <p class="bio">Advogada especialista em direito do terceiro setor e compliance para organizações sociais</p>
+                            <div class="member-credentials">
+                                <span class="credential">📜 OAB-SP 234567</span>
+                                <span class="credential">🎓 Especialista em Compliance</span>
+                                <span class="credential">⏱️ 3 anos no conselho</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="council-member">
+                        <div class="member-image">
+                            <img src="assets/images/conselho-3.jpg" alt="Prof. Carlos Santos" loading="lazy">
+                            <div class="member-badge">
+                                <span class="badge-icon">🎓</span>
+                                <span>Conselheiro</span>
+                            </div>
+                        </div>
+                        <div class="member-content">
+                            <h3>Prof. Carlos Santos</h3>
+                            <p class="role">Conselheiro Fiscal</p>
+                            <p class="bio">Professor universitário de Contabilidade e auditor independente com experiência em organizações sociais</p>
+                            <div class="member-credentials">
+                                <span class="credential">📜 Professor Doutor USP</span>
+                                <span class="credential">🎓 Auditor Independente</span>
+                                <span class="credential">⏱️ 4 anos no conselho</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Canal de Denúncias -->
+        <section class="whistleblower">
+            <div class="container">
+                <div class="whistleblower-content">
+                    <div class="section-header">
+                        <h2 class="section-title">Canal de Denúncias e Ouvidoria</h2>
+                        <p class="section-subtitle">Canal confidencial e seguro para denúncias, sugestões e reclamações</p>
+                    </div>
+                    
+                    <div class="whistleblower-grid">
+                        <div class="whistleblower-info">
+                            <h3>Como Funciona</h3>
+                            <div class="info-items">
+                                <div class="info-item">
+                                    <div class="info-icon">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                                            <path d="M9 12l2 2 4-4"/>
+                                        </svg>
+                                    </div>
+                                    <div class="info-content">
+                                        <h4>Confidencialidade Garantida</h4>
+                                        <p>Sua identidade é protegida em todos os casos</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="info-item">
+                                    <div class="info-icon">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <circle cx="12" cy="12" r="10"/>
+                                            <polyline points="12,6 12,12 16,14"/>
+                                        </svg>
+                                    </div>
+                                    <div class="info-content">
+                                        <h4>Resposta em 48h</h4>
+                                        <p>Todas as denúncias são analisadas rapidamente</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="info-item">
+                                    <div class="info-icon">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+                                            <circle cx="9" cy="7" r="4"/>
+                                            <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
+                                            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                                        </svg>
+                                    </div>
+                                    <div class="info-content">
+                                        <h4>Investigação Independente</h4>
+                                        <p>Conselho Fiscal analisa todos os casos</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-methods">
+                            <h3>Canais de Contato</h3>
+                            <div class="contact-cards">
+                                <div class="contact-card">
+                                    <div class="contact-icon">
+                                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                            <polyline points="22,6 12,13 2,6"/>
+                                        </svg>
+                                    </div>
+                                    <div class="contact-info">
+                                        <h4>E-mail</h4>
+                                        <p>denuncia@programandofuturo.org</p>
+                                        <span class="contact-note">Resposta em até 24h</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="contact-card">
+                                    <div class="contact-icon">
+                                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                                        </svg>
+                                    </div>
+                                    <div class="contact-info">
+                                        <h4>Telefone</h4>
+                                        <p>0800-123-4567</p>
+                                        <span class="contact-note">Gratuito - 24h</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="contact-card">
+                                    <div class="contact-icon">
+                                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+                                        </svg>
+                                    </div>
+                                    <div class="contact-info">
+                                        <h4>WhatsApp</h4>
+                                        <p>(11) 99999-0000</p>
+                                        <span class="contact-note">Seg-Sex: 8h-18h</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="whistleblower-disclaimer">
+                        <div class="disclaimer-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/>
+                                <line x1="12" y1="8" x2="12" y2="12"/>
+                                <line x1="12" y1="16" x2="12.01" y2="16"/>
+                            </svg>
+                        </div>
+                        <div class="disclaimer-content">
+                            <h4>Compromisso com a Ética</h4>
+                            <p>Todas as denúncias são tratadas com seriedade e confidencialidade. Nosso Conselho Fiscal investiga cada caso de forma independente e imparcial, garantindo que nossa organização mantenha os mais altos padrões éticos.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="floating-donate">
+        <a href="doacoes.html" class="floating-btn">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+            </svg>
+            <span>Doar</span>
+        </a>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Programando o Futuro</h3>
+                    <p>Transformando vidas através da tecnologia.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Contato</h4>
+                    <p>contato@programandofuturo.org</p>
+                    <p>(11) 1234-5678</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Programando o Futuro. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/charts.js"></script>
+</body>
+</html>

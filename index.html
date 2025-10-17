@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="ONG Programando o Futuro - Transformando vidas através da tecnologia e educação. Cursos gratuitos de programação, design e tecnologia para jovens e adultos.">
+    <meta name="keywords" content="ONG, educação tecnológica, programação, cursos gratuitos, inclusão digital, voluntariado, doações, impacto social, tecnologia social, capacitação profissional">
+    <meta name="author" content="ONG Programando o Futuro">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="Portuguese">
+    <meta name="revisit-after" content="7 days">
+    <meta name="theme-color" content="#6366f1">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://programandofuturo.org/">
+    <meta property="og:title" content="Programando o Futuro - Transformando Vidas Através da Tecnologia">
+    <meta property="og:description" content="Democratizamos o acesso à educação tecnológica, capacitando pessoas para o mercado de trabalho digital. Mais de 2.500 vidas transformadas.">
+    <meta property="og:image" content="https://programandofuturo.org/assets/images/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:site_name" content="ONG Programando o Futuro">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://programandofuturo.org/">
+    <meta name="twitter:title" content="Programando o Futuro - Transformando Vidas">
+    <meta name="twitter:description" content="Democratizamos o acesso à educação tecnológica. Mais de 2.500 vidas transformadas através da tecnologia.">
+    <meta name="twitter:image" content="https://programandofuturo.org/assets/images/twitter-card.jpg">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://programandofuturo.org/">
+    
+    <title>Programando o Futuro - Transformando Vidas Através da Tecnologia | ONG de Educação Digital</title>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/about.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="manifest.json">
+    
+    <!-- Structured Data (Schema.org) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "NGO",
+      "name": "ONG Programando o Futuro",
+      "alternateName": "Programando o Futuro",
+      "url": "https://programandofuturo.org",
+      "logo": "https://programandofuturo.org/assets/logo.png",
+      "description": "ONG que democratiza o acesso à educação tecnológica, capacitando pessoas para o mercado de trabalho digital através de cursos gratuitos de programação, design e tecnologia.",
+      "foundingDate": "2012",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Rua da Tecnologia, 123",
+        "addressLocality": "São Paulo",
+        "addressRegion": "SP",
+        "postalCode": "01234-567",
+        "addressCountry": "BR"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+55-11-1234-5678",
+        "contactType": "customer service",
+        "email": "contato@programandofuturo.org",
+        "availableLanguage": "Portuguese"
+      },
+      "sameAs": [
+        "https://www.facebook.com/programandofuturo",
+        "https://www.instagram.com/programandofuturo",
+        "https://www.linkedin.com/company/programandofuturo",
+        "https://www.youtube.com/programandofuturo"
+      ],
+      "areaServed": "BR",
+      "knowsAbout": ["Educação Tecnológica", "Programação", "Inclusão Digital", "Capacitação Profissional"],
+      "memberOf": {
+        "@type": "Organization",
+        "name": "OSCIP - Organização da Sociedade Civil de Interesse Público"
+      }
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Programando o Futuro",
+      "url": "https://programandofuturo.org",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://programandofuturo.org/busca?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar" aria-label="Menu principal">
+            <div class="container">
+                <div class="navbar-brand">
+                    <img src="assets/logo.png" alt="Logo Programando o Futuro" class="logo">
+                    <span class="brand-text">Programando o Futuro</span>
+                </div>
+                
+                <button class="navbar-toggle" aria-label="Abrir menu" aria-expanded="false">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+                
+                <ul class="navbar-menu" role="menubar">
+                    <li role="none"><a href="index.html" class="nav-link active" role="menuitem">Home</a></li>
+                    <li role="none"><a href="projetos.html" class="nav-link" role="menuitem">Projetos</a></li>
+                    <li role="none"><a href="voluntariado.html" class="nav-link" role="menuitem">Voluntariado</a></li>
+                    <li role="none"><a href="doacoes.html" class="nav-link" role="menuitem">Doações</a></li>
+                    <li role="none"><a href="transparencia.html" class="nav-link">Transparência</a></li>
+                    <li role="none"><a href="contato.html" class="nav-link" role="menuitem">Contato</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" aria-labelledby="hero-title">
+            <div class="hero-background">
+                <img src="assets/images/hero.png" alt="Hero Image" class="hero-image">
+                <div class="hero-overlay"></div>
+            </div>
+            
+            <div class="container">
+                <div class="hero-content">
+                    <h1 id="hero-title" class="hero-title">
+                        Transformando Vidas Através da <span class="highlight">Tecnologia</span>
+                    </h1>
+                    <p class="hero-subtitle">
+                        Capacitamos jovens e adultos com habilidades digitais para construir um futuro melhor
+                    </p>
+                    <div class="hero-actions">
+                        <a href="voluntariado.html" class="btn btn-primary">Seja Voluntário</a>
+                        <a href="doacoes.html" class="btn btn-secondary">Faça uma Doação</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mission Section -->
+        <section class="mission" aria-labelledby="mission-title">
+            <div class="container">
+                <div class="section-header">
+                    <h2 id="mission-title" class="section-title">Nossa Missão</h2>
+                    <p class="section-subtitle">
+                        Democratizar o acesso à educação tecnológica e criar oportunidades para todos
+                    </p>
+                </div>
+                
+                <div class="mission-grid">
+                    <div class="mission-card">
+                        <div class="mission-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+                                <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+                            </svg>
+                        </div>
+                        <h3 class="mission-title">Educação</h3>
+                        <p class="mission-description">
+                            Oferecemos cursos gratuitos de programação, design e tecnologia para jovens e adultos
+                        </p>
+                    </div>
+                    
+                    <div class="mission-card">
+                        <div class="mission-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                                <circle cx="9" cy="7" r="4"/>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                            </svg>
+                        </div>
+                        <h3 class="mission-title">Comunidade</h3>
+                        <p class="mission-description">
+                            Construímos uma rede de apoio que conecta pessoas e cria oportunidades reais
+                        </p>
+                    </div>
+                    
+                    <div class="mission-card">
+                        <div class="mission-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                                <path d="M2 17l10 5 10-5"/>
+                                <path d="M2 12l10 5 10-5"/>
+                            </svg>
+                        </div>
+                        <h3 class="mission-title">Inovação</h3>
+                        <p class="mission-description">
+                            Desenvolvemos soluções tecnológicas que geram impacto social positivo
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Impact Counter -->
+        <section class="impact-counter" aria-labelledby="impact-title">
+            <h2 id="impact-title" class="sr-only">Nosso Impacto em Números</h2>
+            <div class="container">
+                <div class="counter-grid">
+                    <div class="counter-item">
+                        <span class="counter-number" data-target="2500">0</span>
+                        <span class="counter-label">Pessoas Atendidas</span>
+                    </div>
+                    <div class="counter-item">
+                        <span class="counter-number" data-target="45">0</span>
+                        <span class="counter-label">Projetos Ativos</span>
+                    </div>
+                    <div class="counter-item">
+                        <span class="counter-number" data-target="180">0</span>
+                        <span class="counter-label">Voluntários</span>
+                    </div>
+                    <div class="counter-item">
+                        <span class="counter-number" data-target="12">0</span>
+                        <span class="counter-label">Anos de Impacto</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Projects -->
+        <section class="featured-projects" aria-labelledby="projects-title">
+            <div class="container">
+                <div class="section-header">
+                    <h2 id="projects-title" class="section-title">Projetos em Destaque</h2>
+                    <p class="section-subtitle">
+                        Conheça alguns dos nossos principais projetos que estão transformando vidas
+                    </p>
+                </div>
+                
+                <div class="projects-grid">
+                    <article class="project-card">
+                        <div class="project-image">
+                            <img src="assets/images/projeto-1.jpg" alt="Jovens aprendendo programação">
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">CodeKids</h3>
+                            <p class="project-description">
+                                Ensino de programação para crianças de 8 a 14 anos através de jogos e atividades lúdicas
+                            </p>
+                            <div class="project-meta">
+                                <span class="project-category">Educação</span>
+                                <span class="project-status">Ativo</span>
+                            </div>
+                            <a href="projetos.html#codekids" class="btn btn-outline">Saiba Mais</a>
+                        </div>
+                    </article>
+                    
+                    <article class="project-card">
+                        <div class="project-image">
+                            <img src="assets/images/projeto-2.jpg" alt="Mulheres em workshop de tecnologia">
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">TechWomen</h3>
+                            <p class="project-description">
+                                Capacitação tecnológica exclusiva para mulheres, promovendo igualdade no mercado de trabalho
+                            </p>
+                            <div class="project-meta">
+                                <span class="project-category">Empoderamento</span>
+                                <span class="project-status">Ativo</span>
+                            </div>
+                            <a href="projetos.html#techwomen" class="btn btn-outline">Saiba Mais</a>
+                        </div>
+                    </article>
+                    
+                    <article class="project-card">
+                        <div class="project-image">
+                            <img src="assets/images/projeto-3.jpg" alt="Idosos usando computadores">
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Digital Senior</h3>
+                            <p class="project-description">
+                                Inclusão digital para pessoas da terceira idade, conectando-as ao mundo tecnológico
+                            </p>
+                            <div class="project-meta">
+                                <span class="project-category">Inclusão</span>
+                                <span class="project-status">Ativo</span>
+                            </div>
+                            <a href="projetos.html#digitalsenior" class="btn btn-outline">Saiba Mais</a>
+                        </div>
+                    </article>
+                </div>
+                
+                <div class="section-footer">
+                    <a href="projetos.html" class="btn btn-primary">Ver Todos os Projetos</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="testimonials" aria-labelledby="testimonials-title">
+            <div class="container">
+                <div class="section-header">
+                    <h2 id="testimonials-title" class="section-title">Depoimentos</h2>
+                    <p class="section-subtitle">
+                        Histórias reais de transformação através da tecnologia
+                    </p>
+                </div>
+                
+                <div class="testimonials-carousel">
+                    <div class="testimonial-slide active">
+                        <div class="testimonial-content">
+                            <blockquote>
+                                "Graças ao projeto CodeKids, minha filha descobriu sua paixão pela programação. Hoje ela está criando seus próprios jogos!"
+                            </blockquote>
+                            <cite>
+                                <img src="assets/images/depoimento-1.jpg" alt="Foto de Maria Silva">
+                                <span class="cite-info">
+                                    <strong>Maria Silva</strong>
+                                    <span>Mãe de participante</span>
+                                </span>
+                            </cite>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-slide">
+                        <div class="testimonial-content">
+                            <blockquote>
+                                "O TechWomen mudou minha vida. Consegui meu primeiro emprego na área de tecnologia aos 45 anos!"
+                            </blockquote>
+                            <cite>
+                                <img src="assets/images/depoimento-2.jpg" alt="Foto de Ana Costa">
+                                <span class="cite-info">
+                                    <strong>Ana Costa</strong>
+                                    <span>Ex-aluna TechWomen</span>
+                                </span>
+                            </cite>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-slide">
+                        <div class="testimonial-content">
+                            <blockquote>
+                                "Ser voluntário aqui é incrível. Ver o brilho nos olhos dos alunos quando conseguem criar algo novo não tem preço."
+                            </blockquote>
+                            <cite>
+                                <img src="assets/images/depoimento-3.jpg" alt="Foto de João Santos">
+                                <span class="cite-info">
+                                    <strong>João Santos</strong>
+                                    <span>Voluntário</span>
+                                </span>
+                            </cite>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="carousel-controls">
+                    <button class="carousel-btn prev" aria-label="Depoimento anterior">‹</button>
+                    <div class="carousel-dots">
+                        <button class="dot active" aria-label="Ir para depoimento 1"></button>
+                        <button class="dot" aria-label="Ir para depoimento 2"></button>
+                        <button class="dot" aria-label="Ir para depoimento 3"></button>
+                    </div>
+                    <button class="carousel-btn next" aria-label="Próximo depoimento">›</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- História -->
+        <section class="history-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Nossa Jornada</h2>
+                    <p class="section-subtitle">Mais de uma década transformando vidas através da educação tecnológica</p>
+                </div>
+                
+                <div class="journey-grid">
+                    <div class="journey-card">
+                        <div class="journey-year">2012</div>
+                        <h3>Fundação</h3>
+                        <p>8 desenvolvedores voluntários fundaram a ONG com a primeira turma de 15 alunos em São Paulo.</p>
+                    </div>
+                    
+                    <div class="journey-card">
+                        <div class="journey-year">2018</div>
+                        <h3>Reconhecimento</h3>
+                        <p>Certificação OSCIP e Prêmio Nacional de Inovação Social com mais de 1.000 alunos formados.</p>
+                    </div>
+                    
+                    <div class="journey-card highlight">
+                        <div class="journey-year">2024</div>
+                        <h3>Impacto Nacional</h3>
+                        <p>Referência em educação tecnológica social, com 2.547 vidas transformadas e 205 voluntários ativos.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Missão, Visão e Valores -->
+        <section class="mvv-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Nossos Pilares</h2>
+                    <p class="section-subtitle">Os valores que nos guiam em nossa missão de transformar vidas</p>
+                </div>
+                
+                <div class="mvv-grid">
+                    <div class="mvv-card mission">
+                        <div class="mvv-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                                <path d="M2 17l10 5 10-5"/>
+                                <path d="M2 12l10 5 10-5"/>
+                            </svg>
+                        </div>
+                        <h3>Missão</h3>
+                        <p>Democratizar o acesso à educação tecnológica, capacitando pessoas para o mercado de trabalho digital e promovendo inclusão social através da tecnologia.</p>
+                    </div>
+                    
+                    <div class="mvv-card vision">
+                        <div class="mvv-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                                <circle cx="12" cy="12" r="3"/>
+                            </svg>
+                        </div>
+                        <h3>Visão</h3>
+                        <p>Ser referência nacional em educação tecnológica social, criando um futuro onde todos tenham oportunidades iguais no mundo digital.</p>
+                    </div>
+                    
+                    <div class="mvv-card values">
+                        <div class="mvv-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                            </svg>
+                        </div>
+                        <h3>Valores</h3>
+                        <div class="values-list">
+                            <span class="value-item">🤝 Inclusão e diversidade</span>
+                            <span class="value-item">📚 Educação de qualidade</span>
+                            <span class="value-item">🔍 Transparência</span>
+                            <span class="value-item">💡 Inovação social</span>
+                            <span class="value-item">🌟 Colaboração</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Equipe -->
+        <section class="team-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Conheça Nossa Equipe</h2>
+                    <p class="section-subtitle">Pessoas apaixonadas por educação e tecnologia trabalhando para transformar vidas</p>
+                </div>
+                
+                <div class="team-grid">
+                    <div class="team-member">
+                        <div class="member-photo">
+                            <img src="assets/images/team-1.jpg" alt="Ana Silva">
+                            <div class="member-overlay">
+                                <div class="member-social">
+                                    <a href="#" aria-label="LinkedIn da Ana">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286z"/>
+                                        </svg>
+                                    </a>
+                                    <a href="#" aria-label="Email da Ana">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                            <polyline points="22,6 12,13 2,6"/>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="member-info">
+                            <h3>Ana Silva</h3>
+                            <p class="role">Diretora Executiva</p>
+                            <p class="bio">Formada em Ciência da Computação pela USP, com MBA em Gestão de ONGs. Ana tem 15 anos de experiência em tecnologia e é apaixonada por educação social.</p>
+                            <div class="member-skills">
+                                <span class="skill">Gestão</span>
+                                <span class="skill">Estratégia</span>
+                                <span class="skill">Captação</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="team-member">
+                        <div class="member-photo">
+                            <img src="assets/images/team-2.jpg" alt="Carlos Santos">
+                            <div class="member-overlay">
+                                <div class="member-social">
+                                    <a href="#" aria-label="LinkedIn do Carlos">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286z"/>
+                                        </svg>
+                                    </a>
+                                    <a href="#" aria-label="Email do Carlos">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                            <polyline points="22,6 12,13 2,6"/>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="member-info">
+                            <h3>Carlos Santos</h3>
+                            <p class="role">Coordenador Pedagógico</p>
+                            <p class="bio">Pedagogo especializado em tecnologias educacionais. Carlos desenvolveu metodologias inovadoras para ensino de programação para diferentes faixas etárias.</p>
+                            <div class="member-skills">
+                                <span class="skill">Educação</span>
+                                <span class="skill">Metodologia</span>
+                                <span class="skill">Capacitação</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="team-member">
+                        <div class="member-photo">
+                            <img src="assets/images/team-3.jpg" alt="Maria Costa">
+                            <div class="member-overlay">
+                                <div class="member-social">
+                                    <a href="#" aria-label="LinkedIn da Maria">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286z"/>
+                                        </svg>
+                                    </a>
+                                    <a href="#" aria-label="Email da Maria">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                            <polyline points="22,6 12,13 2,6"/>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="member-info">
+                            <h3>Maria Costa</h3>
+                            <p class="role">Gerente de Projetos</p>
+                            <p class="bio">Engenheira de Software com experiência em gestão de projetos sociais. Maria coordena todas as iniciativas da ONG com foco em inovação e impacto.</p>
+                            <div class="member-skills">
+                                <span class="skill">Projetos</span>
+                                <span class="skill">Tecnologia</span>
+                                <span class="skill">Inovação</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Conquistas e Reconhecimentos -->
+        <section class="achievements-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Conquistas e Reconhecimentos</h2>
+                    <p class="section-subtitle">Prêmios e certificações que validam nosso impacto social</p>
+                </div>
+                
+                <div class="achievements-grid">
+                    <div class="achievement-card">
+                        <div class="achievement-icon">🏆</div>
+                        <h3>Prêmio Inovação Social 2023</h3>
+                        <p>Reconhecimento nacional pela metodologia inovadora de ensino de programação para crianças.</p>
+                        <span class="achievement-year">2023</span>
+                    </div>
+                    
+                    <div class="achievement-card">
+                        <div class="achievement-icon">📜</div>
+                        <h3>Certificação OSCIP</h3>
+                        <p>Organização da Sociedade Civil de Interesse Público certificada pelo Ministério da Justiça.</p>
+                        <span class="achievement-year">2018</span>
+                    </div>
+                    
+                    <div class="achievement-card">
+                        <div class="achievement-icon">🌟</div>
+                        <h3>Selo de Transparência</h3>
+                        <p>Certificação de transparência e prestação de contas pelo Instituto Doar.</p>
+                        <span class="achievement-year">2022</span>
+                    </div>
+                    
+                    <div class="achievement-card">
+                        <div class="achievement-icon">🎯</div>
+                        <h3>Meta ODS Alcançada</h3>
+                        <p>Contribuição significativa para os Objetivos de Desenvolvimento Sustentável da ONU.</p>
+                        <span class="achievement-year">2021</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter -->
+        <section class="newsletter" aria-labelledby="newsletter-title">
+            <div class="container">
+                <div class="newsletter-wrapper">
+                    <div class="newsletter-content">
+                        <div class="newsletter-header">
+                            <div class="newsletter-icon">
+                                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                    <polyline points="22,6 12,13 2,6"/>
+                                </svg>
+                            </div>
+                            <h2 id="newsletter-title" class="newsletter-title">Fique por Dentro</h2>
+                            <p class="newsletter-subtitle">
+                                Receba novidades sobre nossos projetos e oportunidades de voluntariado
+                            </p>
+                        </div>
+                        
+                        <div class="newsletter-benefits">
+                            <div class="benefit-item">
+                                <span class="benefit-icon">📧</span>
+                                <span>Newsletter mensal</span>
+                            </div>
+                            <div class="benefit-item">
+                                <span class="benefit-icon">🎯</span>
+                                <span>Oportunidades exclusivas</span>
+                            </div>
+                            <div class="benefit-item">
+                                <span class="benefit-icon">📚</span>
+                                <span>Conteúdo educativo</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="newsletter-form-container">
+                        <form class="newsletter-form" id="newsletterForm" novalidate>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="newsletter-email" class="form-label">E-mail</label>
+                                    <input 
+                                        type="email" 
+                                        id="newsletter-email" 
+                                        name="email" 
+                                        placeholder="seu@email.com" 
+                                        required
+                                        aria-describedby="newsletter-email-error"
+                                    >
+                                    <div id="newsletter-email-error" class="error-message" role="alert"></div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="newsletter-name" class="form-label">Nome</label>
+                                    <input 
+                                        type="text" 
+                                        id="newsletter-name" 
+                                        name="name" 
+                                        placeholder="Seu nome" 
+                                        required
+                                    >
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <fieldset>
+                                    <legend class="form-legend">Interesses:</legend>
+                                    <div class="checkbox-grid">
+                                        <label class="checkbox-card">
+                                            <input type="checkbox" name="preferences" value="projetos">
+                                            <span class="card-content">
+                                                <span class="card-icon">🚀</span>
+                                                <span class="card-text">Novos Projetos</span>
+                                            </span>
+                                        </label>
+                                        <label class="checkbox-card">
+                                            <input type="checkbox" name="preferences" value="voluntariado">
+                                            <span class="card-content">
+                                                <span class="card-icon">🤝</span>
+                                                <span class="card-text">Voluntariado</span>
+                                            </span>
+                                        </label>
+                                        <label class="checkbox-card">
+                                            <input type="checkbox" name="preferences" value="eventos">
+                                            <span class="card-content">
+                                                <span class="card-icon">📅</span>
+                                                <span class="card-text">Eventos</span>
+                                            </span>
+                                        </label>
+                                    </div>
+                                </fieldset>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary btn-large">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22 2L11 13"/>
+                                    <polygon points="22,2 15,22 11,13 2,9 22,2"/>
+                                </svg>
+                                Inscrever-se Gratuitamente
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Floating Donation Button -->
+    <div class="floating-donate">
+        <a href="doacoes.html" class="floating-btn" aria-label="Fazer doação">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+            </svg>
+            <span>Doar</span>
+        </a>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-brand">
+                        <img src="assets/logo.png" alt="Logo Programando o Futuro" class="footer-logo">
+                        <h3>Programando o Futuro</h3>
+                        <p>Transformando vidas através da tecnologia e educação.</p>
+                    </div>
+                    
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Facebook">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Instagram">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 6.62 5.367 11.987 11.988 11.987 6.62 0 11.987-5.367 11.987-11.987C24.014 5.367 18.637.001 12.017.001zM8.449 16.988c-1.297 0-2.448-.49-3.323-1.297C4.198 14.895 3.708 13.744 3.708 12.447s.49-2.448 1.418-3.323C6.001 8.198 7.152 7.708 8.449 7.708s2.448.49 3.323 1.416c.875.926 1.365 2.077 1.365 3.374s-.49 2.448-1.365 3.323c-.875.807-2.026 1.167-3.323 1.167z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="LinkedIn">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="YouTube">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-title">Links Úteis</h4>
+                    <ul class="footer-links">
+                        <li><a href="sobre.html">Sobre Nós</a></li>
+                        <li><a href="projetos.html">Projetos</a></li>
+                        <li><a href="voluntariado.html">Voluntariado</a></li>
+                        <li><a href="transparencia.html">Transparência</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-title">Contato</h4>
+                    <address class="footer-contact">
+                        <p>Rua da Tecnologia, 123<br>São Paulo - SP, 01234-567</p>
+                        <p>Telefone: (11) 1234-5678</p>
+                        <p>Email: contato@programandofuturo.org</p>
+                    </address>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-title">Certificações</h4>
+                    <div class="certifications">
+                        <img src="assets/images/cert-1.png" alt="Certificação CNPJ">
+                        <img src="assets/images/cert-2.png" alt="Selo de Transparência">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Programando o Futuro. Todos os direitos reservados.</p>
+                <div class="footer-legal">
+                    <a href="politica-privacidade.html">Política de Privacidade</a>
+                    <a href="termos-uso.html">Termos de Uso</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script src="js/forms.js"></script>
+    <script src="js/auth.js"></script>
+</body>
+</html>

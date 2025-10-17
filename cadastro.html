@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Crie sua conta na ONG Programando o Futuro. Cadastre-se como voluntário ou doador.">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="theme-color" content="#6366f1">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://programandofuturo.org/cadastro.html">
+    
+    <title>Cadastro - Crie sua Conta | Programando o Futuro</title>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/auth.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+</head>
+<body class="auth-page">
+    <!-- Header -->
+    <header class="header" role="banner">
+        <nav class="navbar" role="navigation" aria-label="Menu principal">
+            <div class="container">
+                <div class="navbar-brand">
+                    <img src="assets/logo.png" alt="Logo Programando o Futuro" class="logo">
+                    <span class="brand-text">Programando o Futuro</span>
+                </div>
+                
+                <ul class="navbar-menu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="sobre.html" class="nav-link">Sobre</a></li>
+                    <li><a href="projetos.html" class="nav-link">Projetos</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="auth-main" role="main">
+        <div class="auth-container">
+            <div class="auth-card">
+                <div class="auth-header">
+                    <h1 class="auth-title">Crie sua conta</h1>
+                    <p class="auth-subtitle">Junte-se à nossa comunidade</p>
+                </div>
+                
+                <form class="auth-form" id="registerForm" novalidate>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstName" class="form-label">Nome</label>
+                            <input 
+                                type="text" 
+                                id="firstName" 
+                                name="firstName" 
+                                placeholder="Seu nome" 
+                                required
+                                aria-describedby="firstName-error"
+                            >
+                            <div id="firstName-error" class="error-message" role="alert"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="lastName" class="form-label">Sobrenome</label>
+                            <input 
+                                type="text" 
+                                id="lastName" 
+                                name="lastName" 
+                                placeholder="Seu sobrenome" 
+                                required
+                                aria-describedby="lastName-error"
+                            >
+                            <div id="lastName-error" class="error-message" role="alert"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email" class="form-label">E-mail</label>
+                        <input 
+                            type="email" 
+                            id="email" 
+                            name="email" 
+                            placeholder="seu@email.com" 
+                            required
+                            aria-describedby="email-error"
+                        >
+                        <div id="email-error" class="error-message" role="alert"></div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone" class="form-label">Telefone</label>
+                        <input 
+                            type="tel" 
+                            id="phone" 
+                            name="phone" 
+                            placeholder="(11) 99999-9999" 
+                            required
+                            aria-describedby="phone-error"
+                        >
+                        <div id="phone-error" class="error-message" role="alert"></div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="userType" class="form-label">Tipo de usuário</label>
+                        <select id="userType" name="userType" required aria-describedby="userType-error">
+                            <option value="">Selecione uma opção</option>
+                            <option value="donor">Doador/Apoiador</option>
+                            <option value="volunteer">Voluntário</option>
+                            <option value="beneficiary">Beneficiário</option>
+                        </select>
+                        <div id="userType-error" class="error-message" role="alert"></div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="password" class="form-label">Senha</label>
+                        <div class="password-input">
+                            <input 
+                                type="password" 
+                                id="password" 
+                                name="password" 
+                                placeholder="Mínimo 8 caracteres" 
+                                required
+                                minlength="8"
+                                aria-describedby="password-error password-help"
+                            >
+                            <button type="button" class="password-toggle" aria-label="Mostrar/ocultar senha">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                                    <circle cx="12" cy="12" r="3"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <div id="password-help" class="form-help">
+                            A senha deve ter pelo menos 8 caracteres, incluindo letras e números
+                        </div>
+                        <div id="password-error" class="error-message" role="alert"></div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="confirmPassword" class="form-label">Confirmar senha</label>
+                        <div class="password-input">
+                            <input 
+                                type="password" 
+                                id="confirmPassword" 
+                                name="confirmPassword" 
+                                placeholder="Digite a senha novamente" 
+                                required
+                                aria-describedby="confirmPassword-error"
+                            >
+                            <button type="button" class="password-toggle" aria-label="Mostrar/ocultar senha">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                                    <circle cx="12" cy="12" r="3"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <div id="confirmPassword-error" class="error-message" role="alert"></div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="terms" id="terms" required>
+                            <span class="checkmark"></span>
+                            Aceito os <a href="termos-uso.html" target="_blank">Termos de Uso</a> e a <a href="politica-privacidade.html" target="_blank">Política de Privacidade</a>
+                        </label>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="newsletter" id="newsletter">
+                            <span class="checkmark"></span>
+                            Quero receber novidades e oportunidades por e-mail
+                        </label>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary btn-large">
+                        Criar conta
+                    </button>
+                    
+                    <div class="auth-divider">
+                        <span>ou</span>
+                    </div>
+                    
+                    <div class="auth-links">
+                        <p>Já tem uma conta? <a href="login.html">Faça login</a></p>
+                    </div>
+                </form>
+            </div>
+            
+            <div class="auth-info">
+                <div class="info-card">
+                    <div class="info-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                            <circle cx="8.5" cy="7" r="4"/>
+                            <path d="M20 8v6"/>
+                            <path d="M23 11h-6"/>
+                        </svg>
+                    </div>
+                    <h3>Benefícios da conta</h3>
+                    <ul>
+                        <li>Acompanhe seu histórico de participação</li>
+                        <li>Receba certificados digitais</li>
+                        <li>Acesse oportunidades exclusivas</li>
+                        <li>Conecte-se com a comunidade</li>
+                    </ul>
+                </div>
+                
+                <div class="info-card">
+                    <div class="info-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 12l2 2 4-4"/>
+                            <path d="M21 12c-1 0-3-1-3-3s2-3 3-3 3 1 3 3-2 3-3 3"/>
+                            <path d="M3 12c1 0 3-1 3-3s-2-3-3-3-3 1-3 3 2 3 3 3"/>
+                            <path d="M3 12h6m6 0h6"/>
+                        </svg>
+                    </div>
+                    <h3>Segurança garantida</h3>
+                    <p>Seus dados são protegidos com criptografia de ponta e nunca são compartilhados com terceiros</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer auth-footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-simple">
+                <p>&copy; 2024 Programando o Futuro. Todos os direitos reservados.</p>
+                <div class="footer-legal">
+                    <a href="politica-privacidade.html">Política de Privacidade</a>
+                    <a href="termos-uso.html">Termos de Uso</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script src="js/auth.js"></script>
+</body>
+</html>

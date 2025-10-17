@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Área restrita do doador - Acompanhe suas doações, impacto gerado e transparência na ONG Programando o Futuro.">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="theme-color" content="#6366f1">
+    
+    <title>Área do Doador - Dashboard | Programando o Futuro</title>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/user-area.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+</head>
+<body class="user-area-page">
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar" aria-label="Menu principal">
+            <div class="container">
+                <div class="navbar-brand">
+                    <img src="assets/logo.png" alt="Logo Programando o Futuro" class="logo">
+                    <span class="brand-text">Programando o Futuro</span>
+                </div>
+                
+                <div class="navbar-actions">
+                    <a href="index.html" class="nav-link">Voltar ao Site</a>
+                    <button class="user-menu-btn" id="userMenuBtn">
+                        <span class="user-avatar">
+                            <span id="userInitials">D</span>
+                        </span>
+                        <span id="userName">Doador</span>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6,9 12,15 18,9"/>
+                        </svg>
+                    </button>
+                    
+                    <div class="user-dropdown" id="userDropdown">
+                        <a href="#perfil" class="dropdown-item">Meu Perfil</a>
+                        <a href="#configuracoes" class="dropdown-item">Configurações</a>
+                        <hr class="dropdown-divider">
+                        <button class="dropdown-item logout-btn" onclick="authSystem.logout()">Sair</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Welcome Section -->
+            <section class="welcome-section">
+                <div class="welcome-content">
+                    <h1 class="welcome-title">Obrigado, <span id="donorName">Doador</span>!</h1>
+                    <p class="welcome-subtitle">Seu apoio transforma vidas e constrói um futuro melhor</p>
+                </div>
+                
+                <div class="quick-stats">
+                    <div class="stat-item">
+                        <div class="stat-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                            </svg>
+                        </div>
+                        <div class="stat-info">
+                            <span class="stat-number">R$ 2.450</span>
+                            <span class="stat-label">Total Doado</span>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-item">
+                        <div class="stat-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                                <circle cx="9" cy="7" r="4"/>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                            </svg>
+                        </div>
+                        <div class="stat-info">
+                            <span class="stat-number">127</span>
+                            <span class="stat-label">Vidas Impactadas</span>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-item">
+                        <div class="stat-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+                            </svg>
+                        </div>
+                        <div class="stat-info">
+                            <span class="stat-number">8</span>
+                            <span class="stat-label">Projetos Apoiados</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Navigation Tabs -->
+            <nav class="tab-navigation">
+                <button class="tab-btn active" data-tab="doacoes">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                    </svg>
+                    Minhas Doações
+                </button>
+                <button class="tab-btn" data-tab="impacto">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+                    </svg>
+                    Impacto Gerado
+                </button>
+                <button class="tab-btn" data-tab="campanhas">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                        <path d="M2 17l10 5 10-5"/>
+                        <path d="M2 12l10 5 10-5"/>
+                    </svg>
+                    Campanhas Ativas
+                </button>
+                <button class="tab-btn" data-tab="transparencia">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                        <polyline points="14,2 14,8 20,8"/>
+                    </svg>
+                    Transparência
+                </button>
+            </nav>
+
+            <!-- Tab Content -->
+            <div class="tab-content">
+                <!-- Doações Tab -->
+                <section id="doacoes-tab" class="tab-panel active">
+                    <div class="section-header">
+                        <h2>Histórico de Doações</h2>
+                        <div class="filters">
+                            <select class="filter-select" id="yearFilter">
+                                <option value="">Todos os anos</option>
+                                <option value="2024">2024</option>
+                                <option value="2023">2023</option>
+                            </select>
+                            <button class="btn btn-outline">Baixar Comprovantes</button>
+                        </div>
+                    </div>
+                    
+                    <div class="donations-summary">
+                        <div class="summary-card">
+                            <h3>Resumo Anual - 2024</h3>
+                            <div class="summary-stats">
+                                <div class="summary-item">
+                                    <span class="label">Total Doado:</span>
+                                    <span class="value">R$ 1.850,00</span>
+                                </div>
+                                <div class="summary-item">
+                                    <span class="label">Número de Doações:</span>
+                                    <span class="value">12 doações</span>
+                                </div>
+                                <div class="summary-item">
+                                    <span class="label">Média por Doação:</span>
+                                    <span class="value">R$ 154,17</span>
+                                </div>
+                                <div class="summary-item">
+                                    <span class="label">Benefício Fiscal:</span>
+                                    <span class="value">R$ 555,00</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="donations-list">
+                        <div class="donation-item">
+                            <div class="donation-info">
+                                <div class="donation-date">15 Out 2024</div>
+                                <div class="donation-details">
+                                    <h4>Doação Mensal - CodeKids</h4>
+                                    <p>Apoio ao projeto de ensino de programação para crianças</p>
+                                </div>
+                            </div>
+                            <div class="donation-amount">
+                                <span class="amount">R$ 150,00</span>
+                                <span class="method">Cartão de Crédito</span>
+                            </div>
+                            <div class="donation-actions">
+                                <button class="btn btn-sm btn-outline">Comprovante</button>
+                                <button class="btn btn-sm btn-outline">Ver Impacto</button>
+                            </div>
+                        </div>
+
+                        <div class="donation-item">
+                            <div class="donation-info">
+                                <div class="donation-date">15 Set 2024</div>
+                                <div class="donation-details">
+                                    <h4>Doação Mensal - CodeKids</h4>
+                                    <p>Apoio ao projeto de ensino de programação para crianças</p>
+                                </div>
+                            </div>
+                            <div class="donation-amount">
+                                <span class="amount">R$ 150,00</span>
+                                <span class="method">Cartão de Crédito</span>
+                            </div>
+                            <div class="donation-actions">
+                                <button class="btn btn-sm btn-outline">Comprovante</button>
+                                <button class="btn btn-sm btn-outline">Ver Impacto</button>
+                            </div>
+                        </div>
+
+                        <div class="donation-item">
+                            <div class="donation-info">
+                                <div class="donation-date">01 Set 2024</div>
+                                <div class="donation-details">
+                                    <h4>Campanha Emergencial - TechWomen</h4>
+                                    <p>Doação única para expansão do projeto</p>
+                                </div>
+                            </div>
+                            <div class="donation-amount">
+                                <span class="amount">R$ 500,00</span>
+                                <span class="method">PIX</span>
+                            </div>
+                            <div class="donation-actions">
+                                <button class="btn btn-sm btn-outline">Comprovante</button>
+                                <button class="btn btn-sm btn-outline">Ver Impacto</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Impacto Tab -->
+                <section id="impacto-tab" class="tab-panel">
+                    <div class="section-header">
+                        <h2>Seu Impacto na Comunidade</h2>
+                        <p class="section-subtitle">Veja como suas doações estão transformando vidas</p>
+                    </div>
+                    
+                    <div class="impact-cards">
+                        <div class="impact-card">
+                            <div class="impact-header">
+                                <h3>CodeKids</h3>
+                                <span class="impact-badge">Ativo</span>
+                            </div>
+                            <div class="impact-stats">
+                                <div class="stat">
+                                    <span class="number">15</span>
+                                    <span class="label">Crianças Atendidas</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="number">R$ 1.200</span>
+                                    <span class="label">Sua Contribuição</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="number">48h</span>
+                                    <span class="label">Horas de Ensino</span>
+                                </div>
+                            </div>
+                            <div class="impact-description">
+                                <p>Suas doações permitiram que 15 crianças aprendessem programação básica e desenvolvessem seus primeiros jogos.</p>
+                            </div>
+                            <div class="impact-progress">
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 80%"></div>
+                                </div>
+                                <span class="progress-text">80% da meta alcançada</span>
+                            </div>
+                        </div>
+
+                        <div class="impact-card">
+                            <div class="impact-header">
+                                <h3>TechWomen</h3>
+                                <span class="impact-badge">Ativo</span>
+                            </div>
+                            <div class="impact-stats">
+                                <div class="stat">
+                                    <span class="number">8</span>
+                                    <span class="label">Mulheres Capacitadas</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="number">R$ 800</span>
+                                    <span class="label">Sua Contribuição</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="number">3</span>
+                                    <span class="label">Empregos Conquistados</span>
+                                </div>
+                            </div>
+                            <div class="impact-description">
+                                <p>Seu apoio ajudou mulheres em vulnerabilidade a se capacitarem em tecnologia e conquistarem independência financeira.</p>
+                            </div>
+                            <div class="impact-progress">
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 65%"></div>
+                                </div>
+                                <span class="progress-text">65% da meta alcançada</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonials-section">
+                        <h3>Depoimentos dos Beneficiários</h3>
+                        <div class="testimonials-grid">
+                            <div class="testimonial-card">
+                                <blockquote>
+                                    "Graças ao CodeKids, meu filho descobriu sua paixão pela programação. Hoje ele sonha em ser desenvolvedor!"
+                                </blockquote>
+                                <cite>
+                                    <strong>Maria Silva</strong>
+                                    <span>Mãe de beneficiário</span>
+                                </cite>
+                            </div>
+                            
+                            <div class="testimonial-card">
+                                <blockquote>
+                                    "O TechWomen mudou minha vida. Consegui meu primeiro emprego na área de tecnologia aos 35 anos!"
+                                </blockquote>
+                                <cite>
+                                    <strong>Ana Costa</strong>
+                                    <span>Beneficiária TechWomen</span>
+                                </cite>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Campanhas Tab -->
+                <section id="campanhas-tab" class="tab-panel">
+                    <div class="section-header">
+                        <h2>Campanhas Ativas</h2>
+                        <p class="section-subtitle">Apoie novas iniciativas e amplie seu impacto</p>
+                    </div>
+                    
+                    <div class="campaigns-grid">
+                        <div class="campaign-card">
+                            <div class="campaign-image">
+                                <img src="assets/images/campanha-1.jpg" alt="Campanha Digital Senior Plus">
+                            </div>
+                            <div class="campaign-content">
+                                <h3>Digital Senior Plus</h3>
+                                <p>Expansão do projeto de inclusão digital para idosos, incluindo tablets e internet gratuita.</p>
+                                
+                                <div class="campaign-progress">
+                                    <div class="progress-info">
+                                        <span class="raised">R$ 15.750</span>
+                                        <span class="goal">Meta: R$ 25.000</span>
+                                    </div>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 63%"></div>
+                                    </div>
+                                    <div class="progress-details">
+                                        <span>63% alcançado</span>
+                                        <span>12 dias restantes</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="campaign-actions">
+                                    <button class="btn btn-primary">Doar Agora</button>
+                                    <button class="btn btn-outline">Saiba Mais</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="campaign-card">
+                            <div class="campaign-image">
+                                <img src="assets/images/campanha-2.jpg" alt="Campanha Laboratório Móvel">
+                            </div>
+                            <div class="campaign-content">
+                                <h3>Laboratório Móvel de Tecnologia</h3>
+                                <p>Van equipada com computadores para levar educação tecnológica às comunidades periféricas.</p>
+                                
+                                <div class="campaign-progress">
+                                    <div class="progress-info">
+                                        <span class="raised">R$ 32.400</span>
+                                        <span class="goal">Meta: R$ 80.000</span>
+                                    </div>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 40%"></div>
+                                    </div>
+                                    <div class="progress-details">
+                                        <span>40% alcançado</span>
+                                        <span>25 dias restantes</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="campaign-actions">
+                                    <button class="btn btn-primary">Doar Agora</button>
+                                    <button class="btn btn-outline">Saiba Mais</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Transparência Tab -->
+                <section id="transparencia-tab" class="tab-panel">
+                    <div class="section-header">
+                        <h2>Relatórios de Transparência</h2>
+                        <p class="section-subtitle">Acompanhe como seus recursos estão sendo aplicados</p>
+                    </div>
+                    
+                    <div class="transparency-content">
+                        <div class="financial-summary">
+                            <h3>Resumo Financeiro - Outubro 2024</h3>
+                            <div class="financial-chart">
+                                <canvas id="financialChart"></canvas>
+                            </div>
+                            <div class="financial-details">
+                                <div class="detail-item">
+                                    <span class="category">Projetos Educacionais</span>
+                                    <span class="percentage">65%</span>
+                                    <span class="amount">R$ 45.500</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="category">Infraestrutura</span>
+                                    <span class="percentage">20%</span>
+                                    <span class="amount">R$ 14.000</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="category">Administrativo</span>
+                                    <span class="percentage">10%</span>
+                                    <span class="amount">R$ 7.000</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="category">Marketing/Captação</span>
+                                    <span class="percentage">5%</span>
+                                    <span class="amount">R$ 3.500</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="reports-list">
+                            <h3>Relatórios Disponíveis</h3>
+                            <div class="report-item">
+                                <div class="report-info">
+                                    <h4>Relatório Anual 2023</h4>
+                                    <p>Balanço completo das atividades e resultados do ano</p>
+                                    <span class="report-date">Publicado em: 15/03/2024</span>
+                                </div>
+                                <div class="report-actions">
+                                    <button class="btn btn-outline">Baixar PDF</button>
+                                </div>
+                            </div>
+                            
+                            <div class="report-item">
+                                <div class="report-info">
+                                    <h4>Relatório Trimestral - Q3 2024</h4>
+                                    <p>Resultados e aplicação de recursos no terceiro trimestre</p>
+                                    <span class="report-date">Publicado em: 15/10/2024</span>
+                                </div>
+                                <div class="report-actions">
+                                    <button class="btn btn-outline">Baixar PDF</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/donor-area.js"></script>
+</body>
+</html>
