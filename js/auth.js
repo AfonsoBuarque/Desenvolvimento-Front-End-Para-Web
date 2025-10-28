@@ -59,9 +59,12 @@ class AuthSystem {
         const currentPage = window.location.pathname.split('/').pop();
         
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
         // Don't redirect if already on appropriate page
         if (currentPage.includes('dashboard') || currentPage.includes('admin') || currentPage.includes('area-')) {
 =======
+=======
+>>>>>>> Stashed changes
         // Don't redirect if already on appropriate page or on public pages
         if (currentPage.includes('dashboard') || 
             currentPage.includes('admin') || 
@@ -73,6 +76,9 @@ class AuthSystem {
             currentPage.includes('doacoes') ||
             currentPage.includes('transparencia') ||
             currentPage.includes('contato')) {
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
             return;
         }

@@ -192,8 +192,11 @@ class DashboardManager {
         
         counters.forEach(counter => {
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             const target = parseInt(counter.textContent.replace(/[^\d]/g, ''));
 =======
+=======
+>>>>>>> Stashed changes
             // Usa o atributo data-value se existir, senão tenta fazer parse do texto
             const dataValue = counter.getAttribute('data-value');
             const isCurrency = counter.getAttribute('data-currency') === 'true';
@@ -210,6 +213,9 @@ class DashboardManager {
                 return;
             }
             
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
             const duration = 2000;
             const increment = target / (duration / 16);
@@ -223,17 +229,23 @@ class DashboardManager {
                 }
                 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
                 if (counter.textContent.includes('R$')) {
                     counter.textContent = 'R$ ' + Math.floor(current).toLocaleString();
                 } else {
                     counter.textContent = Math.floor(current).toLocaleString();
 =======
+=======
+>>>>>>> Stashed changes
                 const roundedValue = Math.floor(current);
                 
                 if (isCurrency) {
                     counter.textContent = 'R$ ' + roundedValue.toLocaleString('pt-BR');
                 } else {
                     counter.textContent = roundedValue.toLocaleString('pt-BR');
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
                 }
             }, 16);
