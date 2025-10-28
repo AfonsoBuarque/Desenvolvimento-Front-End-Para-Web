@@ -1,0 +1,30 @@
+# robots.txt para ONG Programando o Futuro
+
+User-agent: *
+
+# Páginas permitidas para indexação
+Allow: /
+Allow: /index.html
+Allow: /projetos.html
+Allow: /voluntariado.html
+Allow: /doacoes.html
+Allow: /transparencia.html
+Allow: /contato.html
+
+# Páginas bloqueadas para indexação (áreas privadas e autenticação)
+Disallow: /login.html
+Disallow: /cadastro.html
+Disallow: /area-voluntario.html
+Disallow: /area-doador.html
+Disallow: /admin/
+
+# Diretórios de recursos
+Disallow: /js/
+Disallow: /css/
+Disallow: /assets/
+
+# Sitemap
+Sitemap: https://programandofuturo.org/sitemap.xml
+
+# Crawl-delay (opcional, ajuste conforme necessário)
+Crawl-delay: 1

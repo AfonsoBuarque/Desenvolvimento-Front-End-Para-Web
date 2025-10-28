@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste - Modo Dark | Programando o Futuro</title>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/dark-theme.css">
+    
+    <style>
+        /* Estilos básicos para teste */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 2rem;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .test-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding: 2rem;
+            border-radius: 12px;
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-primary);
+        }
+        
+        .test-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .test-card {
+            padding: 2rem;
+            border-radius: 12px;
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-primary);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .test-card h3 {
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+        }
+        
+        .test-card p {
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-right: 1rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .controls {
+            text-align: center;
+            padding: 2rem;
+            background-color: var(--bg-secondary);
+            border-radius: 12px;
+            margin-bottom: 2rem;
+        }
+        
+        .theme-info {
+            background-color: var(--bg-tertiary);
+            padding: 1rem;
+            border-radius: 8px;
+            margin-top: 1rem;
+            font-family: monospace;
+            color: var(--text-primary);
+        }
+        
+        .navbar-demo {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-primary);
+            border-radius: 12px;
+            margin-bottom: 2rem;
+        }
+        
+        .navbar-brand {
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            color: var(--text-accent);
+        }
+        
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body data-theme="light">
+    <div class="container">
+        <!-- Header de Teste -->
+        <div class="test-header">
+            <h1 style="color: var(--text-primary); margin-bottom: 1rem;">🌙 Teste do Modo Dark</h1>
+            <p style="color: var(--text-secondary);">Esta página demonstra a funcionalidade do modo dark implementado no site.</p>
+        </div>
+        
+        <!-- Navbar Demo -->
+        <div class="navbar-demo">
+            <div class="navbar-brand">Programando o Futuro</div>
+            <div class="navbar-controls">
+                <button class="theme-toggle" id="themeToggle" aria-label="Alternar modo escuro" title="Alternar tema">
+                    <svg class="theme-icon sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="5"/>
+                        <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+                    </svg>
+                    <svg class="theme-icon moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                    </svg>
+                </button>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#projetos">Projetos</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </div>
+        
+        <!-- Controles -->
+        <div class="controls">
+            <h2 style="color: var(--text-primary); margin-bottom: 1rem;">Controles de Teste</h2>
+            <button class="btn btn-primary" onclick="themeManager.setTheme('light')">Tema Claro</button>
+            <button class="btn btn-secondary" onclick="themeManager.setTheme('dark')">Tema Escuro</button>
+            <button class="btn btn-outline" onclick="themeManager.toggleTheme()">Alternar Tema</button>
+            <button class="btn btn-outline" onclick="themeManager.resetToSystemTheme()">Tema do Sistema</button>
+            
+            <div class="theme-info" id="themeInfo">
+                Tema atual: <span id="currentTheme">light</span>
+            </div>
+        </div>
+        
+        <!-- Grid de Teste -->
+        <div class="test-grid">
+            <div class="test-card">
+                <h3>🎨 Cores e Contrastes</h3>
+                <p>Este card demonstra como as cores se adaptam entre os temas claro e escuro, mantendo boa legibilidade e contraste.</p>
+                <button class="btn btn-primary">Botão Primário</button>
+                <button class="btn btn-secondary">Botão Secundário</button>
+            </div>
+            
+            <div class="test-card">
+                <h3>📝 Tipografia</h3>
+                <p>A tipografia mantém sua hierarquia visual em ambos os temas, com cores que se ajustam automaticamente.</p>
+                <p style="color: var(--text-tertiary); font-size: 0.9rem;">Texto secundário com menor contraste</p>
+            </div>
+            
+            <div class="test-card">
+                <h3>🔧 Funcionalidades</h3>
+                <p>O sistema inclui:</p>
+                <ul style="color: var(--text-secondary); margin-left: 1.5rem;">
+                    <li>Persistência no localStorage</li>
+                    <li>Detecção de preferência do sistema</li>
+                    <li>Transições suaves</li>
+                    <li>Atalho de teclado (Ctrl+Shift+T)</li>
+                </ul>
+            </div>
+            
+            <div class="test-card">
+                <h3>♿ Acessibilidade</h3>
+                <p>O modo dark respeita as preferências de acessibilidade do usuário e inclui suporte para:</p>
+                <ul style="color: var(--text-secondary); margin-left: 1.5rem;">
+                    <li>prefers-color-scheme</li>
+                    <li>prefers-reduced-motion</li>
+                    <li>Navegação por teclado</li>
+                    <li>ARIA labels</li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- Informações Técnicas -->
+        <div class="test-card">
+            <h3>🔍 Informações Técnicas</h3>
+            <p>Pressione <kbd style="background: var(--bg-tertiary); padding: 0.2rem 0.4rem; border-radius: 4px; color: var(--text-primary);">Ctrl+Shift+T</kbd> para alternar o tema rapidamente.</p>
+            <p>O tema é salvo automaticamente e será restaurado na próxima visita.</p>
+            
+            <div style="margin-top: 1rem;">
+                <strong style="color: var(--text-primary);">Variáveis CSS utilizadas:</strong>
+                <pre style="background: var(--bg-tertiary); padding: 1rem; border-radius: 8px; margin-top: 0.5rem; overflow-x: auto; color: var(--text-primary);">
+--bg-primary: Fundo principal
+--bg-secondary: Fundo secundário  
+--bg-card: Fundo dos cards
+--text-primary: Texto principal
+--text-secondary: Texto secundário
+--text-accent: Cor de destaque
+--border-primary: Bordas
+--shadow-md: Sombras
+                </pre>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Scripts -->
+    <script src="js/theme-toggle.js"></script>
+    
+    <script>
+        // Atualiza informações do tema na página
+        function updateThemeInfo() {
+            const currentThemeSpan = document.getElementById('currentTheme');
+            if (currentThemeSpan && window.themeManager) {
+                currentThemeSpan.textContent = themeManager.getCurrentTheme();
+            }
+        }
+        
+        // Escuta mudanças de tema
+        document.addEventListener('themeChanged', (event) => {
+            updateThemeInfo();
+            console.log('Tema alterado:', event.detail);
+        });
+        
+        // Atualiza informações quando a página carrega
+        document.addEventListener('DOMContentLoaded', () => {
+            setTimeout(updateThemeInfo, 100);
+        });
+        
+        // Demonstração de como outros scripts podem reagir a mudanças de tema
+        document.addEventListener('themeChanged', (event) => {
+            const { theme } = event.detail;
+            
+            // Exemplo: você poderia recarregar gráficos, mapas, etc.
+            if (theme === 'dark') {
+                console.log('🌙 Modo escuro ativado - aqui você poderia ajustar gráficos, mapas, etc.');
+            } else {
+                console.log('☀️ Modo claro ativado - aqui você poderia ajustar gráficos, mapas, etc.');
+            }
+        });
+    </script>
+</body>
+</html>
